@@ -16,19 +16,16 @@ public class Baraja {
             for (int numero = 1; numero <= 12; numero++) {
                 if (numero != 8 && numero != 9) {
                     cartas.add(new Carta(numero, palo));
-                    
                 }
             }
         }
-    
-    
     }
     
     public void barajar(){
         Collections.shuffle(cartas);
     }
     
-    public void mostrarCartas(){
+    public void mostrarBaraja(){
         if(cartas.size()==0){
             System.out.println("La baraja está vacía.");
         }else{
@@ -39,6 +36,18 @@ public class Baraja {
         }
     }
     
+    public Carta siguienteCarta(){
+        Carta cartaARepartir = new Carta(); 
+        if(cartas.size()==0){
+            System.out.println("La baraja está vacía.");
+            return null;
+        }else{
+            cartaARepartir=cartas.get(0);
+            cartas.remove(0);
+            return cartaARepartir;
+        }
+        
+    }
 }
     
     

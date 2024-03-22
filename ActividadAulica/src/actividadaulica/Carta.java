@@ -10,6 +10,9 @@ public class Carta {
         this.palo = palo;
     }
 
+    public Carta() {
+    }
+    
     @Override
     public String toString() {
         return "Carta{" +  num + " de " + palo + '}';
