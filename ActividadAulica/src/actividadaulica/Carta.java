@@ -12,7 +12,7 @@ public class Carta {
 
     @Override
     public String toString() {
-        return "Carta{" + "num=" + num + ", palo=" + palo + '}';
+        return "Carta{" +  num + " de " + palo + '}';
     }
     
     
