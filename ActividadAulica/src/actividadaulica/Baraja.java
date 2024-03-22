@@ -46,8 +46,25 @@ public class Baraja {
             cartas.remove(0);
             return cartaARepartir;
         }
-        
     }
+    
+    public ArrayList<Carta> darCartas(int cant){
+        ArrayList<Carta> cartasARepartir = new ArrayList(); 
+        if(cartas.size()<cant){
+            System.out.println("No hay cartas suficientes");
+            return null;
+        }else{
+            for(int i=0; i<cant;i++){
+                cartasARepartir.add(siguienteCarta());
+            }
+            return cartasARepartir;
+        }
+    }
+    
+    public int cartasDisponibles(){
+        return cartas.size();
+    }
+    
 }
     
     
