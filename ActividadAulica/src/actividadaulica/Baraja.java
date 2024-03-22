@@ -7,9 +7,11 @@ import java.util.Collections;
 public class Baraja {
    
     private ArrayList<Carta> cartas;
+    private ArrayList<Carta> cartasDadas;
 
     public Baraja() {
        cartas = new ArrayList();
+       cartasDadas = new ArrayList();
        
        String[] palos = {"Espadas", "Bastos", "Oros", "Copas"};
         for (String palo : palos) {
@@ -43,6 +45,7 @@ public class Baraja {
             return null;
         }else{
             cartaARepartir=cartas.get(0);
+            cartasDadas.add(cartaARepartir);
             cartas.remove(0);
             return cartaARepartir;
         }
@@ -63,6 +66,15 @@ public class Baraja {
     
     public int cartasDisponibles(){
         return cartas.size();
+    }
+    
+    public ArrayList<Carta> cartasMonton(){
+        if(cartasDadas.size()==0){
+            System.out.println("No se han dado cartas.");
+            return null;
+        }else{
+            return cartasDadas;
+        }
     }
     
 }

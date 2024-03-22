@@ -30,7 +30,18 @@ public class ActividadAulica {
                 System.out.println(aux.toString());
             }
         }
-        System.out.println("Cartas disponible: "+baraja1.cartasDisponibles());
+        
+        //Muestra las cartas repartidas
+        ArrayList<Carta> cartasRepartidas = new ArrayList();
+        cartasRepartidas = baraja1.cartasMonton();
+        
+        if(cartasRepartidas.size()!=0){
+            System.out.println("Las cartas repartidas son: ");
+            for(Carta aux:cartasRepartidas){
+                System.out.println(aux.toString());
+            }
+        }
+        
     }
     
 }
